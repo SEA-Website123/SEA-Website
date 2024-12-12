@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website - Ariana May Palen</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300&display=swap'); /* Importing aesthetic fonts */
+
+      body {
+          background: linear-gradient(120deg, #a2d9ff, #87ceeb, #e0f7fa); /* Aesthetic blue gradient */
+          font-family: 'Poppins', sans-serif; /* Aesthetic sans-serif font */
+          color: #003366; /* Dark blue text */
+          margin: 0;
+          padding: 0;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .container {
+          width: 80%;
+          margin: auto;
+          text-align: center;
+          padding: 50px;
+          background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque white background */
+          border-radius: 15px;
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+          position: relative;
+      }
+
+      h1, h3 {
+          font-family: 'Playfair Display', serif; /* Elegant serif font for headers */
+          color: #003366; /* Dark blue color for headers */
+      }
+
+      h1 {
+          font-size: 3em;
+          margin-bottom: 10px;
+      }
+
+      h3 span {
+          color: #4682b4; /* Lighter blue for emphasis */
+      }
+
+      .about-section {
+          background-color: #87ceeb; /* Sky blue background */
+          padding: 40px;
+          border-radius: 20px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          border: 2px solid #4682b4; /* Light blue border */
+          position: relative;
+          font-family: 'Playfair Display', serif; /* Elegant font for the About Myself section */
+          color: #003366; /* Dark blue text for contrast */
+          max-width: 800px;
+          margin: 20px auto;
+      }
+
+      .about-section h1 {
+          font-size: 2.5em;
+          color: #ffffff; /* White for heading contrast */
+          margin-bottom: 20px;
+      }
+
+      .about-section hr {
+          width: 50%;
+          border: 1px solid #fff;
+      }
+
+      .about-section p {
+          font-size: 1.4em;
+          line-height: 1.8;
+          color: #ffffff; /* White text for good contrast */
+      }
+
+      .flower-image {
+          position: absolute;
+          width: 150px; /* Flower image size */
+          height: auto;
+          bottom: -50px; /* Adjusted position */
+          right: -50px; /* Adjusted position */
+          transform: rotate(15deg); /* Rotate for an artistic touch */
+      }
+
+      .contact-info {
+          margin-top: 30px;
+          font-size: 1.1em;
+          color: #333;
+      }
+
+      .contact-info b {
+          color: #000;
+      }
+
+      .snapshots {
+          margin-top: 30px;
+          display: grid; /* Using grid for layout */
+          grid-template-columns: repeat(3, 1fr); /* 3 columns */
+          gap: 40px; /* Increased spacing between frames */
+      }
+
+      /* Polaroid-style frame */
+      .polaroid {
+          background-color: white;
+          padding: 10px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+          position: relative;
+          border: 1px solid #ddd;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 30px; /* Simulating the space at the bottom */
+      }
+
+      .polaroid img {
+          width: 100%;
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 5px;
+      }
+
+      .caption {
+          font-size: 14px;
+          color: #555;
+          margin-top: 10px;
+      }
+
+      /* Blue tulip sticker */
+      .blue-tulip {
+          position: absolute;
+          width: 60px; /* Adjust size */
+          height: auto;
+          top: -30px;
+          right: -30px;
+      }
+
+      .about-section .blue-tulip {
+          position: absolute;
+          width: 100px; /* Larger size for about section */
+          height: auto;
+          top: -50px;
+          left: -50px;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="Welcome">Welcome to my Website</h1>
+        <h3 class="top">I am <span>Ariana May Palen</span></h3>
+        
+        <div class="snapshots">
+            <!-- Polaroid photo frame 1 -->
+            <div class="polaroid">
+                <img src="photo1.jpg" alt="Snapshot 1">
+                <div class="caption">Snapshot 1</div>
+                <img src="blue-tulip.png" alt="Blue Tulip Sticker" class="blue-tulip">
+            </div>
+            
+            <!-- Polaroid photo frame 2 -->
+            <div class="polaroid">
+                <img src="photo2.jpg" alt="Snapshot 2">
+                <div class="caption">Snapshot 2</div>
+                <img src="tulips.png" alt="Blue Tulip Sticker" class="blue-tulip">
+            </div>
+            
+            <!-- Polaroid photo frame 3 -->
+            <div class="polaroid">
+                <img src="photo3.jpg" alt="Snapshot 3">
+                <div class="caption">Snapshot 3</div>
+                <img src="tulips.png" alt="Blue Tulip Sticker" class="blue-tulip">
+            </div>
+
+            <!-- Polaroid photo frame 4 -->
+            <div class="polaroid">
+                <img src="photo4.jpg" alt="Snapshot 4">
+                <div class="caption">Snapshot 4</div>
+                <img src="tulips.png" alt="Blue Tulip Sticker" class="blue-tulip">
+            </div>
+            
+            <!-- Polaroid photo frame 5 -->
+            <div class="polaroid">
+                <img src="photo5.jpg" alt="Snapshot 5">
+                <div class="caption">Snapshot 5</div>
+                <img src="tulips.png" alt="Blue Tulip Sticker" class="blue-tulip">
+            </div>
+            
+            <!-- Polaroid photo frame 6 -->
+            <div class="polaroid">
+                <img src="photo6.jpg" alt="Snapshot 6">
+                <div class="caption">Snapshot 6</div>
+                <img src="tulips.png" alt="Blue Tulip Sticker" class="blue-tulip">
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h1>About Myself</h1>
+            <hr>
+            <p>Hello, my name is Ariana May Palen. I am a senior high school student. I am a shy person with a good personality. I am kind, cute, and loving. I love reading poems and novels. I am from Taguig City.</p>
+            <!-- Flower image decoration -->
+            <img src="tulips.png" alt="Flower Decoration" class="flower-image">
+        </div>
+
+        <div class="contact-info">
+            <h1>Contact Me</h1>
+            <b>Name: </b> Ariana May Palen<br>
+            <b>Email: </b> yanapalen726@gmail.com<br>
+            <b>Phone: </b> 09614399067<br>
+            <b>Address: </b> New Lower Bicutan, Taguig City
+        </div>
+    </div>
+
+</body>
+</html>
