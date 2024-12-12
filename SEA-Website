@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA - Sexual Education Awareness</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="logo.png" alt="SEA Logo">
+            <h1>SEA: Sexual Education Awareness</h1>
+        </div>
+
+        <!-- Hamburger Menu (Only for Small Screens) -->
+        <div id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="learn.html"><i class="fas fa-book"></i> Learn</a></li>
+                <li><a href="faq.html"><i class="fas fa-lightbulb"></i> FAQ</a></li>
+                <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar for Small Screens -->
+        <nav id="side-nav">
+            <div class="close-btn" id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="learn.html"><i class="fas fa-book"></i> Learn</a></li>
+                <li><a href="faq.html"><i class="fas fa-lightbulb"></i> Faq</a></li>
+                <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="intro" class="hero-section">
+        <div>
+            <h1>SEA: Sexual Education Awareness</h1>
+            <p>Navigate Deep, with Guidance</p>
+        </div>
+        <div class="hero-image">
+            <img src="logomo.jpg" alt="Team Photo">
+        </div>
+    </section>
+
+    <!-- Introduction Section --><section id="Introduction" class="section container">
+    <h2>Introduction</h2>
+    <p>Welcome to SEA: Sexual Education Awareness. Our campaign’s advocacy aims to ensure that everyone has access to accurate, inclusive, and age-appropriate sexual education. It aims to educate people about healthy relationships, consent, reproductive health, and gender equality. </p>
+</section>
+
+<section id="mission" class="section container">
+    <h2>Our Mission</h2>
+    <p>The objective is to guarantee that everyone has access to the information and resources necessary to make informed sexual health decisions. This involves supporting inclusive education that is free of judgment and based on respect, consent, and equality for everyone.</p>
+</section>
+
+<section id="vision" class="section container">
+    <h2>Our Vision</h2>
+    <p>Our vision is to eliminate barriers such as misinformation, stigma, and prejudice, allowing everyone to make educated decisions about their bodies and relationships in a safe and respectful atmosphere.</p>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <h1>CONTACT</h1>
+        
+        <!-- Contact Links -->
+        <div class="contact-icons">
+            <a href="mailto:sexualeducationawareness09@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i> Gmail
+            </a>
+            <a href="
+https://www.facebook.com/profile.php?id=61568413926817&mibextid=ZbWKwL" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="
+https://www.instagram.com/sea.officialpage?igsh=MTlqdWs0a3pzenliNg==
+" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
