@@ -1,0 +1,967 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        border-bottom: 1px solid #555;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Logo Styling */
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+/* Navigation Links for Large Screens */
+.nav-links ul {
+    display: flex; /* Inline navigation */
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    background-color: tan;
+    border-radius: 5px;
+}
+
+.nav-links ul li a i {
+    font-size: 1.2rem; /* Icon size */
+}
+
+/* Hide Navigation on Small Screens */
+.nav-links {
+    display: none;
+}
+
+/* Hamburger Menu */
+#hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar Navigation */
+#side-nav {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: tan;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Show Sidebar */
+#side-nav.active {
+    left: 0;
+}
+
+#side-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+#side-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#side-nav ul li a:hover {
+    background-color: tan;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Logo for Sidebar */
+.logo-frame {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid white;
+}
+
+.logo-frame img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #hamburger-menu {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide inline navigation on smaller screens */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #side-nav {
+        display: none; /* Hide sidebar on larger screens */
+    }
+
+    .nav-links {
+        display: flex; /* Show inline navigation on larger screens */
+    }
+}
+
+/* Header Styling */
+header {
+    background-color: tan; /* Blue */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: ivory; /* Violet */
+}
+
+/* Hero Section with Background Image */
+.hero-section {
+    color: tan;
+    text-align: left;
+    padding: 60px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    /* Background image settings */
+    background-image: url('yanan.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: ivory; /* Violet CTA */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: ivory; /* Darker Violet */
+}
+
+/* Circular Image Frame in Hero Section */
+.hero-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Section Styling */
+.section {
+    background-color: #e0e7f1; /* Light Blue */
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: tan;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Team Section */
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-member {
+    width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.polaroid-frame {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.polaroid-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    color: tan;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 0.9rem;
+}
+/* Description Section */
+.description-section {
+    display: grid;
+    gap: 20px; /* Space between boxes */
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center section on the page */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Individual Description Box */
+.description-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth to the box */
+    transition: transform 0.3s ease;
+}
+
+.description-box:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.text-content h3 {
+    font-size: 20px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #004d99;
+}
+
+/* Image Styling */
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth to the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .description-section {
+        grid-template-columns: 1fr; /* Stack items in one column on smaller screens */
+    }
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: tan;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: ivory;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+        /* FAQ Section Styling */
+        #faq {
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        #faq h2 {
+            font-size: 28px;
+            color: tan;
+            margin-bottom: 20px;
+        }
+
+        .faq-search {
+            margin-bottom: 30px;
+        }
+
+        .faq-search input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .faq-item {
+            margin: 10px 0;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .faq-item h4 {
+            background: tan;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-item h4 i {
+            position: absolute;
+            right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item h4:hover {
+            background: tan;
+        }
+
+        .faq-item .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f9f9f9;
+            padding: 0 20px;
+        }
+
+        .faq-item .faq-content p {
+            padding: 20px 0;
+        }
+
+        .faq-item.open .faq-content {
+            max-height: 200px;
+        }
+
+        .faq-item.open h4 i {
+            transform: rotate(180deg);
+        }
+
+/* Learn Section */
+.learn {
+    text-align: center;
+    padding: 20px;
+}
+
+.learn h1 {
+    font-size: 3rem;
+    color: tan;
+}
+
+.learn .subheading {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Increased gap between cards */
+    margin-top: 20px;
+}
+
+.card {
+    position: relative;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px;  /* Increased padding for larger cards */
+    border-radius: 10px;  /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.card .title {
+    background: linear-gradient(to right, tan, brown);
+    color: white;
+    font-size: 1.7rem;  /* Increased title size */
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 12px; /* Slightly larger margin */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect on hover */
+}
+
+.card img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+/* Overlay Styling */
+.overlay {
+    display: none;  /* Ensure it's hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    color: black;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between the image and text */
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 90%;  /* Adjust width to fill the screen better */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.overlay-content img {
+    max-width: 50%; /* Increased image size to occupy 50% of overlay */
+    height: auto;
+    margin-left: 30px; /* Space between the text and image */
+    border-radius: 10px;
+}
+
+.text-content {
+    max-width: 45%; /* Text will occupy 45% of the overlay */
+    text-align: left;
+}
+
+.text-content h2 {
+    font-size: 2.8rem; /* Larger title size */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.7rem; /* Larger description font size */
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+/* Close Button / / Learn Section */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 50px; /* Adjusted position to fit the close button in the corner */
+    padding: 10px 15px;
+    color: black;       /* White X */
+    border: none;
+    cursor: pointer;
+    border-radius: 50%; /* Circle button */
+    font-size: 1.5rem;   /* Size of the X */
+    font-weight: bold;
+    text-align: center;
+}
+
+.close-btn:hover {
+    background: tan; /* Darker shade when hovering */
+}
+
+
+/* Learn Section // Learn Section */
+.learn {
+    text-align: center;
+    padding: 40px;
+    background-image: url('logomo.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.learn h1 {
+    font-size: 4rem; /* Large bubble-style font size */
+    font-family: 'Bubblegum Sans', cursive; /* Bubble-style font */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: #ffffff; /* White text color */
+}
+
+.learn .subheading {
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif; /* Keep subheading readable */
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+.learn .subheading {
+    font-size: 2rem;  /* Larger subheading size */
+    color: #333;
+    background: rgba(135, 206, 235, 0.7);  /* Sky blue with transparency for text contrast */
+    padding: 20px;
+    font-family: 'Georgia', serif;  /* Custom font for subheading */
+    border-radius: 10px;  /* Rounded corners */
+    display: inline-block;
+    margin-top: 20px;  /* Margin to separate from the title */
+}/* Sign-In Form Styles */
+.signin-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2em;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.signin-container h2 {
+    color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.signin-container input {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1.5em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.signin-container input:focus {
+    border-color: tan;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.3);
+}
+
+.signin-container button {
+    width: 100%;
+    padding: 1em;
+    background: tan;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signin-container button:hover {
+    background: tan;
+}
+
+.signin-container p {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 1em;
+}
+
+.signin-container p a {
+    color: tan;
+    text-decoration: none;
+}
+
+.signin-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Comment Section Styles */
+#comments-section {
+    display: none;
+    margin-top: 2em;
+    background-color: #ffffff;
+    padding: 2em;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.comment-box {
+    margin-bottom: 2em;
+}
+
+.comment-box textarea {
+    width: 100%;
+    padding: 1em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    resize: none;
+    min-height: 150px;
+    transition: all 0.3s ease;
+}
+
+.comment-box textarea:focus {
+    border-color: tan;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.3);
+}
+
+#submit-comment {
+    width: 100%;
+    padding: 1em;
+    background: tan;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submit-comment:hover {
+    background: tan;
+}
+
+.comments-list {
+    margin-top: 2em;
+}
+
+.comment {
+    background: #f0f0f5;
+    padding: 1.2em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment strong {
+    color: tan;
+    font-size: 1.1em;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Team Member Styling */
+.team-member {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.polaroid-frame {
+    position: relative;
+}
+
+.polaroid-frame img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Add hover effect on team members */
+.team-member:hover .polaroid-frame img {
+    opacity: 0.8;
+}
+
+/* Style for the overlay container */
+.overlay {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+/* Close button */
+.overlay .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Overlay title */
+.overlay h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Overlay description */
+.overlay p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Image inside overlay */
+.overlay img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
